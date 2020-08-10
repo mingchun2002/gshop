@@ -35,6 +35,7 @@ export const reqShopInfo = () => ajax('/info')
  */
 export const reqShopRatings = () => ajax('/ratings')
 
+
 /**
  * 获取商家商品数组
  */
