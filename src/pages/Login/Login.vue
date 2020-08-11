@@ -76,13 +76,11 @@ export default {
       alertShow: false // 是否显示警告框
     }
   },
-
   computed: {
     rightPhone () {
       return /^1\d{10}$/.test(this.phone)
     }
   },
-
   methods: {
     // 异步获取短信验证码
     async getCode () {
