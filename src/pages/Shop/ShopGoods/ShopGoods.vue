@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import BScroll from '@better-scroll/core'
+import BScroll from 'better-scroll'
 import {mapState} from 'vuex'
 import CartControl from '../../../components/CartControl/CartControl.vue'
 import Food from '../../../components/Food/Food.vue'

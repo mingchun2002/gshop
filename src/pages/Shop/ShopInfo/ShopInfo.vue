@@ -11,9 +11,7 @@
           <div class="delivery-money">配送费￥{{info.deliveryPrice}}</div>
         </div>
       </section>
-
       <div class="split"></div>
-
       <section class="section">
         <h3 class="section-title">活动与服务</h3>
         <div class="activity">
@@ -26,9 +24,7 @@
           </div>
         </div>
       </section>
-
       <div class="split"></div>
-
       <section class="section">
         <h3 class="section-title">商家实景</h3>
         <div class="pic-wrapper">
@@ -39,9 +35,7 @@
           </ul>
         </div>
       </section>
-
       <div class="split"></div>
-
       <section class="section">
         <h3 class="section-title">商家信息</h3>
         <ul class="detail">
@@ -54,7 +48,6 @@
     </div>
   </div>
 </template>
-
 <script>
 import BScroll from 'better-scroll'
 import {mapState} from 'vuex'
@@ -68,17 +61,14 @@ export default {
   computed: {
     ...mapState(['info'])
   },
-
   mounted () {
     // 如果数据还没有, 直接结束
     if (!this.info.pics) {
       return
     }
-
     // 数据有了, 可以创建BScroll对象形成滑动
     this._initScroll()
   },
-
   methods: {
     _initScroll () {
       new BScroll('.shop-info')
@@ -88,13 +78,11 @@ export default {
       const space = 6
       const count = this.info.pics.length
       ul.style.width = (liWidth + space) * count - space + 'px'
-
       new BScroll('.pic-wrapper', {
         scrollX: true // 水平滑动
       })
     }
   },
-
   watch: {
     info () { // 刷新流程--> 更新数据
       this.$nextTick(() => {
@@ -107,7 +95,6 @@ export default {
 
 <style lang="stylus" rel="stylesheet/stylus">
   @import "../../../common/stylus/mixins.styl"
-
   .shop-info
     position: absolute
     top: 195px
